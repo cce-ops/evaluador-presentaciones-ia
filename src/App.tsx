@@ -33,7 +33,7 @@ export default function App() {
 
   // Estado del Proveedor y Configuración de Groq
   const [provider, setProvider] = useState<ProviderType>('gemini');
-  const [groqApiKey, setGroqApiKey] = useState<string>(() => localStorage.getItem('groq_api_key') || '');
+  const [groqApiKey, setGroqApiKey] = useState<string>(() => sessionStorage.getItem('groq_api_key') || '');
   
   const [localConfig, setLocalConfig] = useState<LocalConfig>({
     baseUrl: 'http://localhost:11434',
@@ -193,7 +193,7 @@ export default function App() {
                       value={groqApiKey}
                       onChange={(e) => {
                         setGroqApiKey(e.target.value);
-                        localStorage.setItem('groq_api_key', e.target.value);
+                        sessionStorage.setItem('groq_api_key', e.target.value);
                       }}
                       className="flex-1 bg-white dark:bg-gray-900 border border-orange-300 dark:border-orange-700 rounded-lg px-3 py-1.5 text-sm"
                     />

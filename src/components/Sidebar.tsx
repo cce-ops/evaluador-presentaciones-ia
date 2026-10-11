@@ -24,9 +24,8 @@ import type {
 } from '../types';
 
 // Configuración del worker de PDF.js para extracción de texto limpio
-if (typeof window !== 'undefined' && 'GlobalWorkerOptions' in pdfjsLib) {
-  pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
-}
+// (Removed CDN worker import – using bundled worker from fileProcessor)
+
 
 interface SidebarProps {
   theme: 'light' | 'dark';
