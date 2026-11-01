@@ -40,7 +40,8 @@ export interface GeminiModel {
 
 // Únicamente modelos activos de Gemini 3.x para análisis multimodal (texto/visión)
 export const GEMINI_MODELS: GeminiModel[] = [
-  { id: 'gemini-3.8-flash', label: 'Gemini 3.8 Flash', description: 'El más inteligente para tareas complejas y análisis visual', recommended: true },
+  { id: 'gemini-flash-latest', label: 'Gemini Flash Latest', description: 'Alias actualizado automáticamente', recommended: true },
+  { id: 'gemini-3.8-flash', label: 'Gemini 3.8 Flash', description: 'El más inteligente para tareas complejas y análisis visual' },
   { id: 'gemini-3.7-flash', label: 'Gemini 3.7 Flash', description: 'Ejecución fiable y alto rendimiento multimodal' },
   { id: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', description: 'Equilibrio entre velocidad y capacidades multimodales' },
   { id: 'gemini-3.5-flash', label: 'Gemini 3.5 Flash', description: 'Rendimiento base estándar' },
@@ -48,7 +49,7 @@ export const GEMINI_MODELS: GeminiModel[] = [
   { id: 'gemini-3.1-flash-lite', label: 'Gemini 3.1 Flash-Lite', description: 'Alta eficiencia para tareas sencillas' },
 ];
 
-export const DEFAULT_MODEL = 'gemini-3.8-flash';
+export const DEFAULT_MODEL = 'gemini-flash-latest';
 
 export interface ReferenceExample {
   id: string;
